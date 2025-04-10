@@ -13,7 +13,7 @@ const TodoItem = ({ todo }) => {
           checked={todo.completed}
           onChange={() => dispatch(toggleTodo(todo.id))}
         />
-        <span className={`ml-2 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>
+        <span className={`ml-2 ${todo.completed ? '' : ''}`}>{todo.text}</span>
       </div>
       <button onClick={() => dispatch(deleteTodo(todo.id))} className="text-red-500">
         удалить
